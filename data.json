@@ -1,0 +1,82 @@
+{
+        "intents": [
+            {
+                "tag": "greeting",
+                "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hello", "Good day"],
+                "responses": ["Hello, welcome to the government service portal!", "Good to see you here", "Hi there, how can I assist you today?"],
+                "context": [""]
+            },
+            {
+                "tag": "goodbye",
+                "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+                "responses": ["Goodbye! Have a great day", "See you soon", "Bye! Come back again if you need assistance."],
+                "context": [""]
+            },
+            {
+                "tag": "thanks",
+                "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+                "responses": ["You're welcome!", "Glad I could help!", "My pleasure"],
+                "context": [""]
+            },
+            {
+                "tag": "noanswer",
+                "patterns": [],
+                "responses": ["Apologies, I'm not sure I understand", "Could you please provide more information?", "I'm not able to provide an answer at the moment."],
+                "context": [""]
+            },
+            {
+                "tag": "options",
+                "patterns": ["How can I be assisted?", "What services do you provide?", "Can you help me with something?", "What support is available?"],
+                "responses": ["I can assist you with inquiries related to government services, departments, and procedures.", "Offering support for various government services and department-related queries."],
+                "context": [""]
+            },
+            {
+                "tag": "department_info",
+                "patterns": ["Information about government departments", "List of government departments", "Department details"],
+                "responses": ["Sure, please specify the department you're interested in."],
+                "context": ["get_department_info"]
+            },
+            {
+                "tag": "get_department_info",
+                "patterns": [],
+                "responses": ["Loading department information"],
+                "context": [""]
+            },
+            {
+                "tag": "employee_search",
+                "patterns": ["Search for government employees", "Find employees", "List of government staff", "Locate employee", "Search employee directory"],
+                "responses": ["Please provide the name or department of the employee you're looking for."],
+                "context": ["search_employee_by_name"]
+            },
+            {
+                "tag": "search_employee_by_name",
+                "patterns": [],
+                "responses": ["Searching for employee details"],
+                "context": [""]
+            },
+            {
+                "tag": "service_request",
+                "patterns": ["Request a government service", "Submit service request", "Assistance needed", "Request help"],
+                "responses": ["Sure, please specify the service you require or the issue you're facing."],
+                "context": ["service_request_details"]
+            },
+            {
+                "tag": "service_request_details",
+                "patterns": [],
+                "responses": ["Please provide more details about your request."],
+                "context": [""]
+            },
+            {
+                "tag": "service_status",
+                "patterns": ["Check status of service request", "Service request status", "Track service request"],
+                "responses": ["Please provide your service request ID for status update."],
+                "context": ["provide_service_request_id"]
+            },
+            {
+                "tag": "provide_service_request_id",
+                "patterns": [],
+                "responses": ["Fetching service request status"],
+                "context": [""]
+            }
+        ]
+}    
